@@ -1,27 +1,43 @@
-# WhydonateApplication
+# Whydonate Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+### This project is a demonstration of-
+- Displaying customer
+- Showing a particular customer's details by ID
+- Adding a new customer
 
-## Development server
+### Deployed version of the application on Server: [Customer]('https://whydonate.herokuapp.com/')
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## To run the application on development mode.
+### Pre-requisite
+* Node 10 & NPM v6
+* Angular 9
 
-## Code scaffolding
+### Install dependencies
+```bash
+    npm install
+```
+### Run the development server
+```bash
+    ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Navigate to
+[localhost]('http://localhost:4200/home')
 
-## Build
+## Using server side rendering
+### Create the build
+```bash
+    ng build
+```
+- Add `--prod` for compressed build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Run the server
+```bash
+    npm start OR node server.js
+```
 
-## Running unit tests
+### Navigate to
+[localhost]('http://localhost:8080/home)
+- Please change the port, if already added the port in process env.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Made with :heart: for WhyDonate.
