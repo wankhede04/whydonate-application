@@ -1,4 +1,4 @@
-import { State, StateContext, Selector, Action, createSelector } from '@ngxs/store';
+import { State, StateContext, Selector, Action } from '@ngxs/store';
 import { CustomerDetailsStateModel } from './customer.model';
 import { Customer } from './customer.action';
 import { Injectable } from '@angular/core';
@@ -16,6 +16,11 @@ const INITIAL_STATE_DETAILS: CustomerDetailsStateModel = {
 @Injectable()
 export class CustomerDetailsState {
   constructor(private customerService: CustomerService) {}
+
+  @Selector()
+  public static getCustomer(state: CustomerDetailsStateModel) {
+    return state.Customer;
+  }
 
   @Action(Customer.Get)
   public getCustomer(ctx: StateContext<CustomerDetailsStateModel>, action: Customer.Get) {
