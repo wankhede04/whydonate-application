@@ -11,6 +11,7 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { ngxsConfig } from './store/ngxs.config';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ngxsConfig } from './store/ngxs.config';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     NgxsModule.forRoot(
       [],
       ngxsConfig),
