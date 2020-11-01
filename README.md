@@ -5,7 +5,8 @@
 - Showing a particular customer's details by ID
 - Adding a new customer
 
-### Deployed version of the application on Server: [Customer]('https://whydonate.herokuapp.com/')
+### Deployed version of the application on Server:
+[Customer]('https://whydonate.herokuapp.com/')
 
 ## To run the application on development mode.
 ### Pre-requisite
