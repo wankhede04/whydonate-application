@@ -3,7 +3,7 @@
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let customer of customer$ | async">
       {{ customer.name }}
-      <button type="button" class="btn btn-primary" (click)="showCustomerDetails()">Details</button>
+      <button type="button" class="btn btn-primary" (click)="showCustomerDetails(customer.id)">Details</button>
     </li>
   </ul>
 </div>
