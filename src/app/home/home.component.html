@@ -1,5 +1,9 @@
 <div class="container">
   <h2>Home Page</h2>
+  <div class="add-customer">
+    <h5>Add Customer:</h5>
+    <button type="button" class="btn btn-primary" (click)="redirectToAddCustomer()">Add</button>
+  </div>
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let customer of customer$ | async">
       {{ customer.name }}

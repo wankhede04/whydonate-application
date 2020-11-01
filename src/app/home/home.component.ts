@@ -25,4 +25,8 @@ export class HomeComponent implements OnInit {
   public showCustomerDetails(customerID: string) {
     this.router.navigate(['details'], {queryParams: {id: customerID}});
   }
+
+  public redirectToAddCustomer() {
+    this.router.navigate(['add']);
+  }
 }
