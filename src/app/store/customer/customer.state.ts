@@ -10,14 +10,25 @@ const INITIAL_STATE_DETAILS: CustomerDetailsStateModel = {
   Customer: []
 };
 
+/**
+ * Customer details state to manage the states of all received response from API.
+ */
 @State<CustomerDetailsStateModel>({
   name: 'customer',
   defaults: INITIAL_STATE_DETAILS
 })
 @Injectable()
 export class CustomerDetailsState {
+  /**
+   * 
+   * @param customerService of CustomerService
+   */
   constructor(private customerService: CustomerService) {}
 
+  /**
+   * Filter the customer details by ID.
+   * @param id 
+   */
   public static filter(id: string) {
     return createSelector([CustomerDetailsState], (state: CustomerDetailsStateModel) => {
       return state.Customer.filter(detail => detail.id.includes(id))
@@ -29,6 +40,12 @@ export class CustomerDetailsState {
     return state.Customer;
   }
 
+  /**
+   * Get and store cutsomers details
+   * @param ctx for getting the current state
+   * @param action for putting the getter value
+   * @function Swal to show the alert message
+   */
   @Action(Customer.Get)
   public getCustomer(ctx: StateContext<CustomerDetailsStateModel>, action: Customer.Get) {
     return this.customerService.getCustomerData().pipe(
@@ -39,11 +56,22 @@ export class CustomerDetailsState {
           });
         }, (error) => {
           console.log('Error:', error);
+          Swal.fire({
+            title: 'Error',
+            text: error.error,
+            icon: 'error'
+          });
         }
       )
     );
   }
 
+  /**
+   * Save the customer details with payload
+   * @param ctx for getting the current state
+   * @param action for putting the getter value
+   * @function Swal to show the alert message
+   */
   @Action(Customer.Save)
   public saveCustomer(ctx: StateContext<CustomerDetailsStateModel>, action: Customer.Save) {
     return this.customerService.saveCustomerData(action.payload).pipe(

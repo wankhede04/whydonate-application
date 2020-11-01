@@ -8,16 +8,29 @@ import { ICustomerPayload } from '../models/customer';
   providedIn: 'root'
 })
 export class CustomerService {
+  /**
+   * Public variable of IcustomerPayload type to assign input values
+   */
   public customerDetail: ICustomerPayload;
 
+  /*
+  Instance of HttpClient created for API calls
+  */
   constructor(private http: HttpClient) {}
 
+  /**
+   * Get customers details API call
+   */
   public getCustomerData(): Observable<any> {
     return this.http.get(
       `${environment.serverUrl}${environment.apiPrefix}customer/`
     );
   }
 
+  /**
+   * Save customer details API call
+   * @param payload 
+   */
   public saveCustomerData(payload: any): Observable<any> {
     return this.http.post(
       `${environment.serverUrl}${environment.apiPrefix}customer/`,
