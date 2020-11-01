@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { ngxsConfig } from './store/ngxs.config';
 import { HttpClientModule } from '@angular/common/http'
+import { CustomerDetailsState } from './store/customer/customer.state';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http'
     FormsModule,
     HttpClientModule,
     NgxsModule.forRoot(
-      [],
+      [CustomerDetailsState],
       ngxsConfig),
     NgxsStoragePluginModule.forRoot({
       storage: StorageOption.LocalStorage,
