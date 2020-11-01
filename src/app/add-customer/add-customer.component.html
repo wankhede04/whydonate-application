@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Add Customer</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name"
+        [(ngModel)]="customerService.customerDetail.name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email"
+        [(ngModel)]="customerService.customerDetail.email" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter phone"
+        [(ngModel)]="customerService.customerDetail.phone" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" id="address" placeholder="Enter address"
+        [(ngModel)]="customerService.customerDetail.address" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="saveCustomeDetails()">Submit</button>
+  </form>
+</div>
