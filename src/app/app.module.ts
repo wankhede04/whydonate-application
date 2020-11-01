@@ -13,10 +13,16 @@ import { environment } from 'src/environments/environment';
 import { ngxsConfig } from './store/ngxs.config';
 import { HttpClientModule } from '@angular/common/http'
 import { CustomerDetailsState } from './store/customer/customer.state';
+import { HomeComponent } from './home/home.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AddCustomerComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
