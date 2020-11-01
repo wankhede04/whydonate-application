@@ -21,7 +21,16 @@
       <input type="text" class="form-control" id="address" placeholder="Enter address"
         [(ngModel)]="customerService.customerDetail.address" [ngModelOptions]="{standalone: true}">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="saveCustomeDetails()">Submit</button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="saveCustomeDetails()"
+      [disabled]="
+        !customerService.customerDetail.name ||
+        !customerService.customerDetail.email ||
+        !customerService.customerDetail.phone ||
+        !customerService.customerDetail.address"
+    >Submit</button>
   </form>
   <div class="go-home">
     <h5>Go to</h5>
