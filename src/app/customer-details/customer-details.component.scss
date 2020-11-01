@@ -1,0 +1,22 @@
+.list-group {
+  align-items: center;
+}
+
+.list-group-item {
+  max-width: 70%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.go-home {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 15px 0;
+
+  button {
+    margin-left: 0.5rem;
+  }
+}

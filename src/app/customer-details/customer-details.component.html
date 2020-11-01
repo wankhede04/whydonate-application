@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Customer Details</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Name:</strong> {{ customerDetails?.name }}</li>
+    <li class="list-group-item">
+      <strong>Email:</strong> {{ customerDetails?.email }}</li>
+    <li class="list-group-item">
+      <strong>Phone:</strong> {{ customerDetails?.phone }}</li>
+    <li class="list-group-item">
+      <strong>Address:</strong> {{ customerDetails?.address }}</li>
+  </ul>
+  <div class="go-home">
+    <h5>Go to</h5>
+    <button class="btn btn-primary" (click)="redirectToHome()">Home</button>
+  </div>
+</div>
