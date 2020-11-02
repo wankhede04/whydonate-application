@@ -21,3 +21,10 @@ form {
     margin-left: 0.5rem;
   }
 }
+
+@media screen and (max-width: 767px) {
+  form {
+    max-width: 100%;
+    font-size: 15px;
+  }
+}
